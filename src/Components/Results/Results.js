@@ -1,8 +1,11 @@
 import React from 'react';
+import './Results.css';
 
 function Results() {
   return (
-    <h2>Results</h2>
+    <div className='results'>
+      <h2 className='results-title'>Results:</h2>
+    </div>
   )
 }
 

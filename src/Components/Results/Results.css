@@ -1,0 +1,10 @@
+.results {
+  background-color: black;
+  color: white;
+  height: 60vh;
+  width: 45vw;
+}
+
+.results-title {
+  margin: 1em;
+}

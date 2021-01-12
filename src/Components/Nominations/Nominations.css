@@ -1,0 +1,10 @@
+.nominations {
+  background-color: black;
+  color: white;
+  height: 60vh;
+  width: 45vw;
+}
+
+.nominations-title {
+  margin: 1em;
+}
