@@ -1,12 +1,12 @@
 import React from 'react';
 import './Search.css';
 
-function Search() {
+function Search({setValue}) {
+
   return (
     <form>
       <label>Search:</label>
-      <input type='text' value='' placeholder='Rambo'></input>
-      <button>Submit</button>
+      <input type='text' placeholder='Rambo' onChange={setValue}></input>
     </form>
   )
 }
