@@ -7,13 +7,18 @@ import './App.css';
 
 function App() {
   const [searchValue, setSearchValue] = useState('')
+  let movies;
 
   useEffect(() => {
     console.log('search ', searchValue);
-    getMovies(process.env.REACT_APP_API_KEY, searchValue, 1)
-      .then(data => {
-        console.log('data ', data.Search)
-      })
+    if (searchValue !== '') {
+      getMovies(process.env.REACT_APP_API_KEY, searchValue, 1)
+        .then(data => {
+          console.log('data ', data.Search)
+          movies = data.Search
+          console.log('Movies ', movies);
+        })
+    }
   }, [searchValue])
 
   const handleValueChange = (e) => {
