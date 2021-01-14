@@ -14,15 +14,17 @@ function App() {
     if (searchValue !== '') {
       getMovies(process.env.REACT_APP_API_KEY, searchValue, 1)
         .then(data => {
-          console.log('data ', data.Search)
           movies = data.Search
-          console.log('Movies ', movies);
         })
     }
   }, [searchValue])
 
   const handleValueChange = (e) => {
-    setSearchValue(searchValue + e.nativeEvent.data)
+    if (e.nativeEvent.inputType !== 'deleteContentBackward') {
+      setSearchValue(searchValue + e.nativeEvent.data)
+    } else if (e.nativeEvent.inputType === 'deleteContentBackward') {
+      setSearchValue(searchValue.slice(0, searchValue.length - 1))
+    }
   }
 
     return (
