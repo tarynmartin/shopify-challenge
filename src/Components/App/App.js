@@ -8,6 +8,7 @@ import './App.css';
 function App() {
   const [searchValue, setSearchValue] = useState('')
   const [movies, setMovies] = useState(null)
+  const [nominations, setNominations] = useState([])
 
   useEffect(() => {
     if (searchValue !== '') {
@@ -17,6 +18,10 @@ function App() {
         })
     }
   }, [searchValue])
+
+  const handleNomination = (movie) => {
+    setNominations(nominations => [...nominations, movie])
+  } 
 
   const handleValueChange = (e) => {
     if (e.nativeEvent.inputType !== 'deleteContentBackward') {
@@ -33,8 +38,8 @@ function App() {
         </header>
         <Search setValue={handleValueChange}/>
         <div className='results-nominations'>
-          <Results movies={movies}/>
-          <Nominations />
+          <Results movies={movies} nominate={handleNomination}/>
+          <Nominations nominations={nominations}/>
         </div>
       </div>
     )
