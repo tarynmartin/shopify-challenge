@@ -1,7 +1,7 @@
 import React from 'react';
 import './MovieCard.css';
 
-function MovieCard({ movie, parent, nominate, remove }) {
+function MovieCard({ movie, parent, nominate, remove, hidden }) {
 
   const nominateOnClick = (movie) => {
     movie.disabled = true;

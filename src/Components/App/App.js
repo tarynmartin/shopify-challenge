@@ -9,7 +9,7 @@ function App() {
   const [searchValue, setSearchValue] = useState('')
   const [movies, setMovies] = useState(null)
   const [nominations, setNominations] = useState([])
-  let hidden = false;
+  const [hidden, setHidden] = useState(null);
 
   useEffect(() => {
     if (searchValue !== '') {
@@ -22,7 +22,9 @@ function App() {
 
   useEffect(() => {
     if(nominations.length === 5) {
-      hidden = true;
+      setHidden(true)
+    } else if (nominations.length < 5) {
+      setHidden(false)
     }
   }, [nominations])
 
