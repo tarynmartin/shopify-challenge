@@ -1,7 +1,7 @@
 import React from 'react';
 import './MovieCard.css';
 
-function MovieCard({ movie, parent, nominate, remove }) {
+function MovieCard({ movie, parent, nominate, remove, hidden }) {
 
   const nominateOnClick = (movie) => {
     movie.disabled = true;
@@ -14,10 +14,10 @@ function MovieCard({ movie, parent, nominate, remove }) {
   }
 
   return (
-    <article className='moviecard'>
+    <article className='movie-card'>
       <h2 className='movie-info'>{`${movie.Title} (${movie.Year})`}
       {parent === 'results' &&
-        <button className='nominate-button' disabled={movie.disabled} onClick={() => nominateOnClick(movie)}>Nominate</button>
+          <button className={`nominate-button ${hidden ? 'hidden' : ''}`} disabled={movie.disabled} onClick={() => nominateOnClick(movie)}>Nominate</button>
       }
       {parent === 'nominations' &&
         <button className='remove-button' onClick={() => removeNomination(movie)}>Remove</button>

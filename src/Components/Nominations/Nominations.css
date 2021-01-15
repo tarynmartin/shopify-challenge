@@ -1,7 +1,9 @@
 .nominations {
   background-color: black;
   color: white;
-  height: 60vh;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  height: 65vh;
   width: 45vw;
 }
 

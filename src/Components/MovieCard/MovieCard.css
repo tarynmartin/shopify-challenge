@@ -1,4 +1,4 @@
-.moviecard {
+.movie-card {
   box-sizing: border-box;
   width: 43vw;
 }
@@ -16,4 +16,8 @@
   background-color: white;
   font-size: large;
   font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
