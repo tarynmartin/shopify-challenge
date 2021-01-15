@@ -9,6 +9,7 @@ function App() {
   const [searchValue, setSearchValue] = useState('')
   const [movies, setMovies] = useState(null)
   const [nominations, setNominations] = useState([])
+  let hidden = false;
 
   useEffect(() => {
     if (searchValue !== '') {
@@ -18,6 +19,12 @@ function App() {
         })
     }
   }, [searchValue])
+
+  useEffect(() => {
+    if(nominations.length === 5) {
+      hidden = true;
+    }
+  }, [nominations])
 
   const handleNomination = (movie) => {
     setNominations(nominations => [...nominations, movie])
@@ -42,7 +49,7 @@ function App() {
         </header>
         <Search setValue={handleValueChange}/>
         <div className='results-nominations'>
-          <Results movies={movies} nominate={handleNomination}/>
+          <Results movies={movies} nominate={handleNomination} hidden={hidden}/>
           <Nominations nominations={nominations} remove={removeNomination}/>
         </div>
       </div>
