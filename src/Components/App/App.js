@@ -23,6 +23,10 @@ function App() {
     setNominations(nominations => [...nominations, movie])
   } 
 
+  const removeNomination = (movie) => {
+    setNominations(nominations.filter(nomination => nomination.imdbID !== movie.imdbID))
+  }
+
   const handleValueChange = (e) => {
     if (e.nativeEvent.inputType !== 'deleteContentBackward') {
       setSearchValue(searchValue + e.nativeEvent.data)
@@ -39,7 +43,7 @@ function App() {
         <Search setValue={handleValueChange}/>
         <div className='results-nominations'>
           <Results movies={movies} nominate={handleNomination}/>
-          <Nominations nominations={nominations}/>
+          <Nominations nominations={nominations} remove={removeNomination}/>
         </div>
       </div>
     )

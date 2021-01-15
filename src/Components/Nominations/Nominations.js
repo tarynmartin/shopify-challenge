@@ -2,13 +2,13 @@ import React from 'react';
 import './Nominations.css'
 import MovieCard from '../MovieCard/MovieCard';
 
-function Nominations({nominations}) {
+function Nominations({nominations, remove, disable, makeDisabled}) {
   let nominatedMovies;
   
   if(nominations) {
     nominatedMovies = nominations.map(movie => {
       return (
-        <MovieCard movie={movie} parent={'nominations'} key={movie.imdbID} />
+        <MovieCard movie={movie} remove={remove} disable={disable} makeDisabled={makeDisabled} parent={'nominations'} key={movie.imdbID} />
       )
     })
   }
