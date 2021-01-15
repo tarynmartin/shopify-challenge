@@ -1,0 +1,15 @@
+.popup {
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2em;
+  background-color: teal;
+  color: white;
+  z-index: 1;
+}
+
+.close-btn {
+  margin: 0.5em;
+}

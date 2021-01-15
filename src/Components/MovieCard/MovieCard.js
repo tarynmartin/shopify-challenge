@@ -14,7 +14,7 @@ function MovieCard({ movie, parent, nominate, remove, hidden }) {
   }
 
   return (
-    <article className='moviecard'>
+    <article className='movie-card'>
       <h2 className='movie-info'>{`${movie.Title} (${movie.Year})`}
       {parent === 'results' &&
           <button className={`nominate-button ${hidden ? 'hidden' : ''}`} disabled={movie.disabled} onClick={() => nominateOnClick(movie)}>Nominate</button>
