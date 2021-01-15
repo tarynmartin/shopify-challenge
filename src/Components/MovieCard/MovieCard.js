@@ -5,7 +5,7 @@ function MovieCard({ movie, parent }) {
 
   return (
     <article className='moviecard'>
-      <h2 className='movie-info'>{`${movie.Title} (${movie.Year})`}<button>Nominate</button></h2>
+      <h2 className='movie-info'>{`${movie.Title} (${movie.Year})`}<button className='nominate-button'>Nominate</button></h2>
     </article>
   )
 }

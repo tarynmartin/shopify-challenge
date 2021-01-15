@@ -7,3 +7,12 @@
   margin: 0;
   margin-right: 0.5em;
 }
+
+.nominate-button {
+  height: 2em;
+  width: 8vw;
+  border: none;
+  background-color: white;
+  font-size: large;
+  font-weight: bold;
+}
