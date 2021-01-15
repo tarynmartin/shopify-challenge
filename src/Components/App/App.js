@@ -48,13 +48,17 @@ function App() {
     }
   }
 
+  const closeBanner = () => {
+    setPopup(false);
+  }
+
     return (
       <div className="App">
         <header>
           <h1 className='header-name'>The Shoppies</h1>
         </header>
         {popup &&
-          <Popup />
+          <Popup close={closeBanner}/>
         }
         <Search setValue={handleValueChange}/>
         <div className='results-nominations'>
