@@ -2,13 +2,13 @@ import React from 'react';
 import MovieCard from '../MovieCard/MovieCard.js';
 import './Results.css';
 
-function Results({movies}) {
+function Results({movies, nominate}) {
   let allMovies;
 
   if(movies) {
     allMovies = movies.map(movie => {
       return (
-        <MovieCard movie={movie} parent={'results'} key={movie.imdbID}/>
+        <MovieCard movie={movie} nominate={nominate} parent={'results'} key={movie.imdbID}/>
       )
     })
   }
