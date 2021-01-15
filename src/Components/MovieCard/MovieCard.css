@@ -1,0 +1,9 @@
+.moviecard {
+  box-sizing: border-box;
+  width: 43vw;
+}
+
+.movie-info {
+  margin: 0;
+  margin-right: 0.5em;
+}

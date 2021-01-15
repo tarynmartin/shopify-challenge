@@ -1,10 +1,17 @@
 .results {
   background-color: black;
   color: white;
-  height: 60vh;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  height: 65vh;
   width: 45vw;
 }
 
 .results-title {
+  font-size: 2em;
   margin: 1em;
+}
+
+.movie-results {
+  margin-left: 2em;
 }
