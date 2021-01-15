@@ -7,14 +7,13 @@ import './App.css';
 
 function App() {
   const [searchValue, setSearchValue] = useState('')
-  let movies;
+  const [movies, setMovies] = useState(null)
 
   useEffect(() => {
-    console.log('search ', searchValue);
     if (searchValue !== '') {
       getMovies(process.env.REACT_APP_API_KEY, searchValue, 1)
         .then(data => {
-          movies = data.Search
+          setMovies(data.Search);
         })
     }
   }, [searchValue])
@@ -34,7 +33,7 @@ function App() {
         </header>
         <Search setValue={handleValueChange}/>
         <div className='results-nominations'>
-          <Results />
+          <Results movies={movies}/>
           <Nominations />
         </div>
       </div>
