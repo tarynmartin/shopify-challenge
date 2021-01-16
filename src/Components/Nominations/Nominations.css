@@ -7,6 +7,50 @@
   width: 45vw;
 }
 
+.title-container {
+  text-align: center;
+}
+
 .nominations-title {
   margin: 1em;
+  font-size: 2em;
+  text-decoration: underline;
+  color: white;
+}
+
+/* Media Queries */
+/* Need to create media queries for tablets*/
+
+@media screen and (max-width: 1200px) {
+  .nominations {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nominations-title {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nominations {
+    height: 73vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nominations {
+    height: 80vh;
+  }
+  
+  .nominations-title {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nominations-title {
+    font-size: 0.8em;
+  }
 }

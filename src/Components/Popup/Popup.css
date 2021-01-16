@@ -1,6 +1,6 @@
 .popup {
   position: absolute;
-  height: 15vh;
+  height: 16vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -8,8 +8,44 @@
   background-color: teal;
   color: white;
   z-index: 1;
+  text-align: center;
+}
+
+.button-div {
+  text-align: end;
 }
 
 .close-btn {
   margin: 0.5em;
+  margin-right: 2em;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+}
+
+.message {
+  margin: 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+  .message {
+    padding: 0.5em;
+  }
+
+ .popup {
+   margin-left: 0;
+ }
+}
+
+@media screen and (max-width: 569px) {
+  .message {
+    font-size: medium;
+  }
+ .popup {
+   height: 15vh;
+ }
 }

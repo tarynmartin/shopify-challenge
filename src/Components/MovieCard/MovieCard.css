@@ -1,23 +1,88 @@
 .movie-card {
   box-sizing: border-box;
   width: 43vw;
+  margin: 3em;
 }
 
 .movie-info {
   margin: 0;
   margin-right: 0.5em;
+  font-size: 2em;
 }
 
 .nominate-button, 
 .remove-button {
-  height: 2em;
+  height: 1.5em;
   width: 8vw;
   border: none;
   background-color: white;
   font-size: large;
   font-weight: bold;
+  margin: 0 0.5em;
 }
 
 .hidden {
   display: none;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+  .movie-card {
+    margin: 1.5em;
+  }
+
+  .movie-info {
+    font-size: 1.5em;
+  }
+
+  .nominate-button,
+  .remove-button {
+    height: 1.3em;
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .nominate-button,
+  .remove-button {
+    width: 10vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .movie-info {
+    font-size: 1.2em;
+  }
+
+  .nominate-button,
+  .remove-button {
+    width: 12vw;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .movie-card {
+    margin: 1.5em 1em;
+  }
+
+  .movie-info {
+    font-size: 1em;
+  }
+
+  .nominate-button,
+  .remove-button {
+    height: 1em;
+    width: 15vw;
+    font-size: small;
+    padding-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .nominate-button,
+  .remove-button {
+    width: 20vw;
+  }
 }
