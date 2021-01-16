@@ -17,3 +17,23 @@
   text-decoration: underline;
   color: white;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+  .nominations-title {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nominations-title {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nominations-title {
+    font-size: 0.8em;
+  }
+}
