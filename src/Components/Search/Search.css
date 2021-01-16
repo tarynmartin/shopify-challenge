@@ -6,23 +6,56 @@ form {
 }
 
 label {
-  margin: 1em;
-  margin-right: 0.5em;
+  margin: 0.5em 1em;
   font-size: 1.2em;
   font-weight: bold;
   color: teal;
 }
 
 input {
-  width: 88.7%;
+  width: 88.5%;
   font-size: 1.5em;
   border-color: teal;
   border-top: none;
   border-left: none;
   border-right: none;
   margin-bottom: 0.2em;
+  margin-right: 0.5em;
 }
 
 input:focus {
   outline-color: teal;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+  form {
+    margin: 0.5em;
+  }
+
+  input {
+    width: 87%;
+  } 
+}
+
+@media screen and (max-width: 1000px) {
+  form {
+    margin-left: 0;
+  }
+  input {
+    width: 86%;
+  } 
+}
+
+@media screen and (max-width: 850px) {
+  input {
+    width: 84%;
+  } 
+}
+
+@media screen and (max-width: 600px) {
+  input {
+    width: 80%;
+  } 
 }
