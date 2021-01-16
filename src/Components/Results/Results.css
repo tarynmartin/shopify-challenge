@@ -15,6 +15,13 @@
 }
 
 /* Media Queries */
+/* Need to create media queries for tablets*/
+
+@media screen and (max-width: 1200px) {
+  .results {
+    height: 70vh;
+  }
+}
 
 @media screen and (max-width: 900px) {
   .results-title {
@@ -22,7 +29,17 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .results {
+    height: 73vh;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .results {
+    height: 80vh;
+  }
+  
   .results-title {
     font-size: 1.2em;
   }

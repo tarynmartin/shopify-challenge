@@ -19,6 +19,13 @@
 }
 
 /* Media Queries */
+/* Need to create media queries for tablets*/
+
+@media screen and (max-width: 1200px) {
+  .nominations {
+    height: 70vh;
+  }
+}
 
 @media screen and (max-width: 900px) {
   .nominations-title {
@@ -26,7 +33,17 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .nominations {
+    height: 73vh;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .nominations {
+    height: 80vh;
+  }
+  
   .nominations-title {
     font-size: 1.2em;
   }
