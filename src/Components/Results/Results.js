@@ -15,7 +15,9 @@ function Results({movies, nominate, hidden}) {
 
   return (
     <div className='results'>
-      <h2 className='results-title'>Results:</h2>
+      <div className='title-container'>
+        <h2 className='results-title'>Results</h2>
+      </div>
       {movies && 
         <div className='movie-results'>
           {allMovies}

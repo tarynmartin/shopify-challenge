@@ -7,14 +7,22 @@ form {
 
 label {
   margin: 1em;
+  margin-right: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: teal;
 }
 
 input {
-  width: 80%;
-  font-size: large;
+  width: 88.7%;
+  font-size: 1.5em;
+  border-color: teal;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 0.2em;
 }
 
-button {
-  margin: 2em;
-  width: 7%;
+input:focus {
+  outline-color: teal;
 }

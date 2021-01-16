@@ -7,6 +7,13 @@
   width: 45vw;
 }
 
+.title-container {
+  text-align: center;
+}
+
 .nominations-title {
   margin: 1em;
+  font-size: 2em;
+  text-decoration: underline;
+  color: white;
 }

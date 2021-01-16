@@ -5,7 +5,7 @@ function Search({setValue}) {
 
   return (
     <form>
-      <label>Search:</label>
+      <label>Search</label>
       <input type='text' placeholder='Rambo' onChange={setValue}></input>
     </form>
   )

@@ -10,8 +10,6 @@
 .results-title {
   font-size: 2em;
   margin: 1em;
-}
-
-.movie-results {
-  margin-left: 2em;
+  text-decoration: underline;
+  color: white;
 }

@@ -15,9 +15,13 @@ function Nominations({nominations, remove}) {
 
   return (
     <div className='nominations'>
-      <h2 className='nominations-title'>Your Nominations:</h2>
+      <div className='title-container'>
+        <h2 className='nominations-title'>Your Nominations</h2>
+      </div>
       {nominations &&
-        nominatedMovies
+        <div className='all-nominations'>
+          {nominatedMovies}
+        </div>
       }
     </div>
   )

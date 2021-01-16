@@ -1,21 +1,25 @@
 .movie-card {
   box-sizing: border-box;
   width: 43vw;
+  margin: 3em;
 }
 
 .movie-info {
   margin: 0;
   margin-right: 0.5em;
+  font-size: 2em;
 }
 
 .nominate-button, 
 .remove-button {
-  height: 2em;
+  height: 1.5em;
   width: 8vw;
   border: none;
   background-color: white;
   font-size: large;
   font-weight: bold;
+  margin: 0;
+  margin-left: 2em;
 }
 
 .hidden {
