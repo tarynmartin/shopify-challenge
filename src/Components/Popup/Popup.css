@@ -1,6 +1,6 @@
 .popup {
   position: absolute;
-  height: 12vh;
+  height: 16vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -27,4 +27,25 @@
 
 .message {
   margin: 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+  .message {
+    padding: 0.5em;
+  }
+
+ .popup {
+   margin-left: 0;
+ }
+}
+
+@media screen and (max-width: 569px) {
+  .message {
+    font-size: medium;
+  }
+ .popup {
+   height: 15vh;
+ }
 }
