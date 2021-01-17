@@ -14,6 +14,13 @@ function App() {
   const [popup, setPopup] = useState(false)
 
   useEffect(() => {
+    const savedNominations = JSON.parse(localStorage.getItem('nominations'));
+    if (savedNominations) {
+      setNominations(savedNominations)
+    }
+  }, [])
+
+  useEffect(() => {
     if (searchValue !== '') {
       getMovies(process.env.REACT_APP_API_KEY, searchValue, 1)
         .then(data => {
@@ -30,6 +37,7 @@ function App() {
       setHidden(false)
       setPopup(false)
     }
+    setLocalStorage()
   }, [nominations])
 
   const handleNomination = (movie) => {
@@ -38,6 +46,14 @@ function App() {
 
   const removeNomination = (movie) => {
     setNominations(nominations.filter(nomination => nomination.imdbID !== movie.imdbID))
+  }
+
+  const setLocalStorage = () => {
+    if (nominations.length === 0) {
+      localStorage.clear()
+    } else if (nominations.length > 0) {
+      localStorage.setItem('nominations', JSON.stringify(nominations));
+    }
   }
 
   const handleValueChange = (e) => {
