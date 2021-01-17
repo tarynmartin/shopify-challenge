@@ -18,6 +18,9 @@ function Nominations({nominations, remove}) {
       <div className='title-container'>
         <h2 className='nominations-title'>Your Nominations</h2>
       </div>
+      {nominations.length === 0 &&
+        <h3 className='no-nominations'>No nominations yet. Please click on the nominate button for up to 5 movies you would like to nominate.</h3>
+      }
       {nominations &&
         <div className='all-nominations'>
           {nominatedMovies}

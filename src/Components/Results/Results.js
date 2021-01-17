@@ -18,6 +18,9 @@ function Results({movies, nominate, hidden}) {
       <div className='title-container'>
         <h2 className='results-title'>Results</h2>
       </div>
+      {!movies &&
+        <h3 className='no-results'>No results yet. Please enter a search above to find movies.</h3>
+      }
       {movies && 
         <div className='movie-results'>
           {allMovies}

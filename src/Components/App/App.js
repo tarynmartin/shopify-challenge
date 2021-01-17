@@ -37,7 +37,7 @@ function App() {
       setHidden(false)
       setPopup(false)
     }
-    setLocalStorage()
+    localStorage.setItem('nominations', JSON.stringify(nominations));
   }, [nominations])
 
   const handleNomination = (movie) => {
@@ -46,14 +46,6 @@ function App() {
 
   const removeNomination = (movie) => {
     setNominations(nominations.filter(nomination => nomination.imdbID !== movie.imdbID))
-  }
-
-  const setLocalStorage = () => {
-    if (nominations.length === 0) {
-      localStorage.clear()
-    } else if (nominations.length > 0) {
-      localStorage.setItem('nominations', JSON.stringify(nominations));
-    }
   }
 
   const handleValueChange = (e) => {
