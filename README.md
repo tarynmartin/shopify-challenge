@@ -57,10 +57,10 @@ In terminal, go to the project directory and run 'npm start' to open the project
 ## Functionality
 
 ### Searching for a movie, nominating a movie, removing nominations, and refreshing page and saving nominations
-![main app functionality](./assets/main-functionality.gif)
+![main app functionality](./Assets/main-functionality.gif)
 
 ### Reaching nomination limit, displaying banner and removal of nomination buttons
-![nomination limit functionality](./assets/limit.gif)
+![nomination limit functionality](./Assets/limit.gif)
 
 ## Next Steps
 - Improve responsive design, especially for laptops
