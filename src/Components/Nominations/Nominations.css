@@ -18,6 +18,11 @@
   color: white;
 }
 
+.no-nominations {
+  margin: 1em;
+  text-align: center;
+}
+
 /* Media Queries */
 /* Need to create media queries for tablets*/
 
