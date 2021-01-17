@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# The Shoppies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Brief Description](#brief-description)
+- [How to use](#how-to-use)
+- [Installation](#installation)
+- [Functionality](#functionality)
+- [Next Steps](#next-steps)
+- [Acknowledgements and Resources](#acknowledgements-and-resources)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- Brief Description -->
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Brief Description
+This is an app that allows a user to search for movies by title and allows the user to nominate up to 5 movies for The Shoppies. Site is responsive and received 100 for accessibility through lighthouse.
 
-### `npm test`
+## How to use
+User searches for movies by title. When they see a movie they want to nominate, they click the nominate movie. When a movie is nominated, the nominate button for that movie is disabled. If they decided to remove a nomination, they can click on the remove button on the nominations list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+When a user reaches 5 nominations, a banner pops up telling them they can't add more and the nomination buttons disappear.
 
-### `npm run build`
+If a user leaves the page and returns, their previous nominations will be retrieved and displayed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React 16
+- CSS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+**Fork this repository:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+https://github.com/tarynmartin/shopify-challenge
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Clone your forked repository**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`git clone` and the copied URL
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Change into the directory and install the project dependencies**
 
-## Learn More
+`cd` into directory and run `npm install` for dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### How to see the product
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In terminal, go to the project directory and run 'npm start' to open the project in the browser. Have fun finding movies!
 
-### Code Splitting
+### Live version
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Deployed Site](https://taryn-shopify-challenge.herokuapp.com/)
 
-### Analyzing the Bundle Size
+## Functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Searching for a movie, nominating a movie, removing nominations, and refreshing page and saving nominations
+![main app functionality](./assets/main-functionality.gif)
 
-### Making a Progressive Web App
+### Reaching nomination limit, displaying banner and removal of nomination buttons
+![nomination limit functionality](./assets/limit.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Next Steps
+- Improve responsive design, especially for laptops
+- Improve CSS/styling - change fonts, improve overall look of app
+- Allow pagination of results, api only returns 10 matching movies, even when there are more; want a way for a user to see other matches
+- Create a modal pop up so when a user clicks on a movie, they can see additional information about that movie
+- Way to save list & share them with others
 
-### Advanced Configuration
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+👤 **Taryn Martin**
+- Github: [tarynmartin](https://github.com/tarynmartin)
+- LinkedIn: [Taryn](https://www.linkedin.com/in/tarynmartin919/)
 
-### Deployment
+## Acknowledgements and Resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[Movie Database](http://www.omdbapi.com/) API used to retrieve movie info.
 
-### `npm run build` fails to minify
+<!-- MARKDOWN LINKS & IMAGES -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[contributors-shield]: https://img.shields.io/github/contributors/tarynmartin/shopify-challenge.svg?style=flat-square
+[contributors-url]: https://github.com/tarynmartin/shopify-challenge/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tarynmartin/shopify-challenge.svg?style=flat-square
+[forks-url]: https://github.com/tarynmartin/shopify-challenge/network/members
+[stars-shield]: https://img.shields.io/github/stars/tarynmartin/shopify-challenge.svg?style=flat-square
+[stars-url]: https://github.com/tarynmartin/shopify-challenge/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tarynmartin/shopify-challenge.svg?style=flat-square
+[issues-url]: https://github.com/tarynmartin/shopify-challenge/issues
