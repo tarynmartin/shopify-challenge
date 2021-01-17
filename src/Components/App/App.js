@@ -33,12 +33,11 @@ function App() {
     if(nominations.length === 5) {
       setHidden(true)
       setPopup(true);
-      setLocalStorage()
     } else if (nominations.length < 5) {
       setHidden(false)
       setPopup(false)
-      setLocalStorage()
     }
+    setLocalStorage()
   }, [nominations])
 
   const handleNomination = (movie) => {
